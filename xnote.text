@@ -1,0 +1,5 @@
+1. pour verifier la connexion avec port 
+sudo netstat -tuln | grep 8080
+
+
+find / -name kafka-topics.sh 2>/dev/null
