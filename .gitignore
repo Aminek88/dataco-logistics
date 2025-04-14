@@ -1,0 +1,6 @@
+.env
+airflow/logs/
+__pycache__/
+*.pyc
+*.log
+ml/experiments/

@@ -1,0 +1,5 @@
+mlflow==2.16.2
+snowflake-connector-python==3.12.2
+scikit-learn==1.5.1
+xgboost==2.1.1
+python-dotenv==1.0.1
