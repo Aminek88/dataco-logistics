@@ -6,3 +6,30 @@ find / -name kafka-topics.sh 2>/dev/null
 
 
 docker volume rm dataco-logistics_postgres-data dataco-logistics_kafka_dat
+
+docker system prune -a --volumes
+
+
+docker volume rm dataco-logistics_kafka_data
+dataco-logisti
+
+rm -rf ~/Desktop/amine/VS_project/dataco-logistics/kafka_data
+
+
+
+
+
+
+
+
+cd ~/Desktop/amine/VS_project/dataco-logistics
+docker-compose down -v
+docker volume ls | grep dataco-logistics
+docker volume rm dataco-logistics_kafka_data dataco-logistics_zookeeper_data
+rm -rf ~/Desktop/amine/VS_project/dataco-logistics/kafka_data
+rm -rf ~/Desktop/amine/VS_project/dataco-logistics/zookeeper_data
+docker-compose up -d zookeeper kafka
+docker ps | grep kafka
+docker logs dataco-logistics_kafka_1
+docker exec -it dataco-logistics_kafka_1 /opt/kafka/bin/kafka-topics.sh --create --topic logistics-topic --bootstrap-server kafka:9092 --partitions 1 --replication-factor 1
+docker exec -it dataco-logistics_kafka_1 /opt/kafka/bin/kafka-topics.sh --list --bootstrap-server kafka:9092

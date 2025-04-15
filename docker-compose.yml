@@ -37,6 +37,8 @@ services:
       - postgres
     volumes:
       - ./api:/app
+      - ./env:/app/env
+      - ./data :/app/data
     networks:
       - dataco-net
 
